@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+  </head>
+  <body>
+    <style>
+      h3 {
+        color: green;
+      }
+      
+      /* grid container */
+      .container {
+        display: grid;
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+
+        /* agregar columnas */
+        grid-template-columns: 1fr 100px 2fr;
+
+        /* agregar filas */
+        grid-template-rows: 1fr 1fr 1fr;
+
+        /* agregar espacio entre columnas */
+        grid-column-gap: 20px;
+
+        /* agregar espacio entre filas */
+        grid-row-gap: 5px;
+
+        /* agregar espacio entre filas y columnas*/
+        grid-gap: 10px 20px;
+      }
+      
+      .d1 { background: LightSkyBlue; }
+
+      .d2 {
+        background: LightSalmon;
+
+        /* alinear item horizontalmente */
+        justify-self: center;
+      }
+
+      .d3 {
+        background: PaleTurquoise;
+
+        /* alinear item verticalmente */
+        align-self: end;
+      }
+
+      .d4 { background: LightPink; }
+
+      .d5 {
+        background: PaleGreen;
+
+        /* controlar espacio en columnas */
+        grid-column: 2 / 4;
+
+        /* controlar espacio en filas */
+        grid-row: 2 / 4;
+      }
+
+      .container2 {
+        /* alinear todos los elementos horizontalmente*/
+        justify-items: center;
+
+        /* alinear todos los elementos verticalmente*/
+        align-items: end;
+      }
+      
+      .container3 {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-gap: 10px;
+
+        /* ajustar tamaño de las celdas con repeat */
+        grid-template-rows: repeat(3, 1fr);
+
+        /* limitar el tamaño de las celdas con minmax y auto-fill o auto-fit*/
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+
+        /* dividir celdas en areas */
+        grid-template-areas:
+        "header header header"
+        " . content content"
+        "footer footer footer";
+      }
+
+      .item1 { background: LightSkyBlue; }
+      .item2 { background: LightSalmon; }
+      .item3 { background: PaleTurquoise; }
+      .item4 { background: LightPink; }
+      .item5 { 
+        background: PaleGreen; 
+        
+        /* asignar area a celda */
+        grid-area: footer;
+      }
+
+      .container4 {
+        font-size: 1.5em;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas:
+          "header"
+          "advert"
+          "content"
+          "footer";
+      }
+
+      .cell1 {
+        background: LightSkyBlue;
+        grid-area: header;
+      }
+
+      .cell2 {
+        background: LightSalmon;
+        grid-area: advert;
+      }
+
+      .cell3 {
+        background: PaleTurquoise;
+        grid-area: content;
+
+        /* grid interno */
+        display: grid;
+        grid-template-columns: auto 1fr;
+      }
+
+      .cell4 {
+        background: lightpink;
+        grid-area: footer;
+      }
+
+      .itemOne {
+        background: PaleGreen;
+      }
+
+      .itemTwo {
+        background: BlanchedAlmond;
+      }
+
+      @media (min-width: 400px){
+        .container4{
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto 1fr auto;
+          grid-template-areas:
+            "advert header"
+            "advert content"
+            "advert footer";
+        }
+      }
+
+      @media (min-width: 700px){
+        .container4{
+          grid-template-areas:
+            "header header"
+            "advert content"
+            "footer footer";
+        }
+      }
+
+    </style>
+
+    <h4><a href="index.html">Volver</a></h4>
+
+    <h3>Ajuste de tamaños en filas y columnas</h3>
+    <div class="container">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>
+    </div>
+    <br>
+
+    <h3>Alinear objetos en Horizontal y Vertical</h3>
+    <div class="container container2">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="d5">5</div>
+    </div>
+    <br>
+
+    <h3>Dividir y ajustar celdas en areas</h3>
+    <div class="container3">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+    </div>
+    <br>
+
+    <h3>Uso de Media Queries y Grids internos</h3>
+    <div class="container4">
+        <div class="cell1">header</div>
+        <div class="cell2">advert</div>
+        <div class="cell3">
+          <div class="itemOne">paragraph1</div>
+          <div class="itemTwo">paragraph2</div>
+        </div>
+        <div class="cell4">footer</div>
+    </div>
+    <br>
+
+  </body>
+</html>
