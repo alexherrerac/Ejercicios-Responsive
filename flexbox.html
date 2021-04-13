@@ -4,46 +4,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FlexBox</title>
+    <title>Flexbox</title>
   </head>
   <body>
     <style>
+      #principal {
+        display: flex;
+      }
 
-      /* display flex, flex-direction,
-        justify-content, align-items */
       #box-container {
+        height: 300px;
+        width: 50%;
+        display: flex;
+      }
+
+      #box-container2 {
+        height: 300px;
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      #box-container3 {
+        display: flex;
+        height: 300px;
+        width: 50%;
+        flex-direction: column;
+      }
+
+      #box-container4 {
         background: gray;
         display: flex;
-        height: 500px;
-        flex-direction: row-reverse;
+        width: 1500px;
         justify-content: center;
+      }
+
+      #box-container5 {
+        background: gray;
+        display: flex;
+        height: 300px;
+        width: 50%;
         align-items: center;
       }
 
-      /* flex: flex-grow, flex-shrink, flex-basis 
-        align-self, order*/
+      #box-container6 {
+        background: gray;
+        display: flex;
+        width: 70%;
+        height: 100%;
+        flex-wrap: wrap;
+      }
+
       #box-1 {
         background-color: dodgerblue;
-        width: 100%;
-        height: 10%;
-        align-self: center;
+        width: 300px;
         font-size: 24px;
-        flex: 1 1 150px;
-        order: 2;
       }
 
       #box-2 {
         background-color: orangered;
-        width: 100%;
-        height: 10%;
-        align-self: flex-end;
+        width: 300px;
         font-size: 18px;
-        flex: 2 2 150px;
-        order: 1;
       }
 
-      h2 {
-          color: green;
+      #box-3 {
+        background-color: violet;
+        width: 300px;
+        height: 200px;
+      }
+
+      #box-4 {
+        background-color: yellow;
+        width: 300px;
+        height: 200px;
+      }
+
+      #box-5 {
+        background-color: green;
+        width: 300px;
+        height: 200px;
+      }
+
+      #box-6 {
+        background-color: black;
+        width: 300px;
+        height: 200px;
+      }
+
+      .box-1 {
+        background-color: dodgerblue;
+        height: 200px;
+        width: 300px;
+        font-size: 24px;
+      }
+
+      .box-2 {
+        background-color: orangered;
+        height: 200px;
+        width: 300px;
+        font-size: 18px;
       }
 
       /* Tweet Embed */
@@ -83,7 +142,8 @@
         padding: 5px;
       }
 
-      header h3, header h4 {
+      header h3,
+      header h4 {
         display: flex;
         margin: 0;
       }
@@ -130,46 +190,270 @@
 
     <h4><a href="index.html">Volver</a></h4>
 
-    <div id="box-container">
-      <div id="box-1">Hello</div>
-      <div id="box-2">Goodbye</div>
+    <h3>Display: flex;</h3>
+    <div id="principal">
+      <div id="box-container">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
+      </div>
+      <div>
+        <header>
+          <img
+            src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg"
+            alt="Quincy Larson's profile picture"
+            class="profile-thumbnail"
+          />
+          <div class="profile-name">
+            <h3>Quincy Larson</h3>
+            <h4>@ossia</h4>
+          </div>
+          <div class="follow-btn">
+            <button>Follow</button>
+          </div>
+        </header>
+        <div id="inner">
+          <p>
+            I meet so many people who are in search of that one trick that will
+            help them work smart. Even if you work smart, you still have to work
+            hard.
+          </p>
+          <span class="date">1:32 PM - 12 Jan 2018</span>
+          <hr />
+        </div>
+        <footer>
+          <div class="stats">
+            <div class="Retweets"><strong>107</strong> Retweets</div>
+            <div class="likes"><strong>431</strong> Likes</div>
+          </div>
+          <div class="cta">
+            <button class="share-btn">Share</button>
+            <button class="retweet-btn">Retweet</button>
+            <button class="like-btn">Like</button>
+          </div>
+        </footer>
+      </div>
     </div>
-    <br>
 
-    <h2>Tweet Embed</h2>
-    <header>
-      <img
-        src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg"
-        alt="Quincy Larson's profile picture"
-        class="profile-thumbnail"
-      />
-      <div class="profile-name">
-        <h3>Quincy Larson</h3>
-        <h4>@ossia</h4>
+    <h3>Flex-direction: row-reverse;</h3>
+    <div id="principal">
+      <div id="box-container2">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
       </div>
-      <div class="follow-btn">
-        <button>Follow</button>
+      <div>
+        <header>
+          <img
+            src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg"
+            alt="Quincy Larson's profile picture"
+            class="profile-thumbnail"
+          />
+          <div class="profile-name">
+            <h3>Quincy Larson</h3>
+            <h4>@ossia</h4>
+          </div>
+          <div class="follow-btn">
+            <button>Follow</button>
+          </div>
+        </header>
+        <div id="inner">
+          <p>
+            I meet so many people who are in search of that one trick that will
+            help them work smart. Even if you work smart, you still have to work
+            hard.
+          </p>
+          <span class="date">1:32 PM - 12 Jan 2018</span>
+          <hr />
+        </div>
+        <footer>
+          <div class="stats">
+            <div class="Retweets"><strong>107</strong> Retweets</div>
+            <div class="likes"><strong>431</strong> Likes</div>
+          </div>
+          <div class="cta">
+            <button class="share-btn">Share</button>
+            <button class="retweet-btn">Retweet</button>
+            <button class="like-btn">Like</button>
+          </div>
+        </footer>
       </div>
-    </header>
-    <div id="inner">
-      <p>
-        I meet so many people who are in search of that one trick that will help
-        them work smart. Even if you work smart, you still have to work hard.
-      </p>
-      <span class="date">1:32 PM - 12 Jan 2018</span>
-      <hr />
     </div>
-    <footer>
-      <div class="stats">
-        <div class="Retweets"><strong>107</strong> Retweets</div>
-        <div class="likes"><strong>431</strong> Likes</div>
+
+    <h3>Flex-direction: column;</h3>
+    <div id="principal">
+      <div id="box-container3">
+        <div class="box-1"></div>
+        <div class="box-2"></div>
       </div>
-      <div class="cta">
-        <button class="share-btn">Share</button>
-        <button class="retweet-btn">Retweet</button>
-        <button class="like-btn">Like</button>
+      <div>
+        <header>
+          <img
+            src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg"
+            alt="Quincy Larson's profile picture"
+            class="profile-thumbnail"
+          />
+          <div class="profile-name">
+            <h3>Quincy Larson</h3>
+            <h4>@ossia</h4>
+          </div>
+          <div class="follow-btn">
+            <button>Follow</button>
+          </div>
+        </header>
+        <div id="inner">
+          <p>
+            I meet so many people who are in search of that one trick that will
+            help them work smart. Even if you work smart, you still have to work
+            hard.
+          </p>
+          <span class="date">1:32 PM - 12 Jan 2018</span>
+          <hr />
+        </div>
+        <footer>
+          <div class="stats">
+            <div class="Retweets"><strong>107</strong> Retweets</div>
+            <div class="likes"><strong>431</strong> Likes</div>
+          </div>
+          <div class="cta">
+            <button class="share-btn">Share</button>
+            <button class="retweet-btn">Retweet</button>
+            <button class="like-btn">Like</button>
+          </div>
+        </footer>
       </div>
-    </footer>
-    <br>
+    </div>
+
+    <h3>Justify-content: center; (Horizontal)</h3>
+    <div id="principal">
+      <div id="box-container4">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
+      </div>
+      <div>
+        <header>
+          <img
+            src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg"
+            alt="Quincy Larson's profile picture"
+            class="profile-thumbnail"
+          />
+          <div class="profile-name">
+            <h3>Quincy Larson</h3>
+            <h4>@ossia</h4>
+          </div>
+          <div class="follow-btn">
+            <button>Follow</button>
+          </div>
+        </header>
+        <div id="inner">
+          <p>
+            I meet so many people who are in search of that one trick that will
+            help them work smart. Even if you work smart, you still have to work
+            hard.
+          </p>
+          <span class="date">1:32 PM - 12 Jan 2018</span>
+          <hr />
+        </div>
+        <footer>
+          <div class="stats">
+            <div class="Retweets"><strong>107</strong> Retweets</div>
+            <div class="likes"><strong>431</strong> Likes</div>
+          </div>
+          <div class="cta">
+            <button class="share-btn">Share</button>
+            <button class="retweet-btn">Retweet</button>
+            <button class="like-btn">Like</button>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <h3>Align-items: center; (Vertical)</h3>
+    <div id="principal">
+      <div id="box-container5">
+        <div id="box-1"><p>Hello</p></div>
+        <div id="box-2"><p>Goodbye</p></div>
+      </div>
+      <div>
+        <header>
+          <img
+            src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg"
+            alt="Quincy Larson's profile picture"
+            class="profile-thumbnail"
+          />
+          <div class="profile-name">
+            <h3>Quincy Larson</h3>
+            <h4>@ossia</h4>
+          </div>
+          <div class="follow-btn">
+            <button>Follow</button>
+          </div>
+        </header>
+        <div id="inner">
+          <p>
+            I meet so many people who are in search of that one trick that will
+            help them work smart. Even if you work smart, you still have to work
+            hard.
+          </p>
+          <span class="date">1:32 PM - 12 Jan 2018</span>
+          <hr />
+        </div>
+        <footer>
+          <div class="stats">
+            <div class="Retweets"><strong>107</strong> Retweets</div>
+            <div class="likes"><strong>431</strong> Likes</div>
+          </div>
+          <div class="cta">
+            <button class="share-btn">Share</button>
+            <button class="retweet-btn">Retweet</button>
+            <button class="like-btn">Like</button>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <h3>Flex-wrap: wrap;</h3>
+    <div id="box-container6">
+      <div class="box-1"></div>
+      <div class="box-2"></div>
+      <div id="box-3"></div>
+      <div id="box-4"></div>
+      <div id="box-5"></div>
+      <div id="box-6"></div>
+    </div>
+
+    <h3>Flex-shrink:</h3>
+    <div id="box-container">
+      <div id="box-1" style="flex-shrink: 1"><p>1</p></div>
+      <div id="box-2" style="flex-shrink: 3"><p>3</p></div>
+    </div>
+
+    <h3>Flex-grow:</h3>
+    <div id="box-container">
+      <div id="box-1" style="flex-grow: 3"><p>3</p></div>
+      <div id="box-2" style="flex-grow: 1"><p>1</p></div>
+    </div>
+
+    <h3>Flex-basis:</h3>
+    <div id="box-container">
+      <div id="box-1" style="flex-basis: 10em"><p>10em</p></div>
+      <div id="box-2" style="flex-basis: 20em"><p>20em</p></div>
+    </div>
+
+    <h3>Flex:</h3>
+    <div id="box-container">
+      <div id="box-1" style="flex: 2 2 150px"><p>2 2 150px</p></div>
+      <div id="box-2" style="flex: 1 1 150px"><p>1 1 150px</p></div>
+    </div>
+
+    <h3>Order:</h3>
+    <div id="box-container">
+      <div id="box-1" style="order: 2"><p>2</p></div>
+      <div id="box-2" style="order: 1"><p>1</p></div>
+    </div>
+
+    <h3>Align-self:</h3>
+    <div id="box-container">
+      <div class="box-1" style="align-self: center"><p>center</p></div>
+      <div class="box-2" style="align-self: flex-end"><p>flex-end</p></div>
+    </div>
   </body>
 </html>
