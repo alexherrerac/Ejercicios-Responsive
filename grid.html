@@ -8,8 +8,12 @@
   </head>
   <body>
     <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
       h3 {
-            color: green;
+        color: green;
       }
 
       .d1 {
@@ -157,152 +161,152 @@
           "header header header"
           " . content content"
           "footer footer footer";
-        }
+      }
 
-        .container11 {
-            font-size: 40px;
-            min-height: 300px;
-            width: 100%;
-            background: LightGray;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-gap: 10px;
-            grid-template-areas:
-            "header header header"
-            "advert content content"
-            "footer footer footer";
-        }
+      .container11 {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas:
+          "header header header"
+          "advert content content"
+          "footer footer footer";
+      }
 
-        .container12 {
-            font-size: 40px;
-            min-height: 300px;
-            width: 100%;
-            background: LightGray;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-gap: 10px;
-        }
+      .container12 {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
 
-        .container13 {
-            font-size: 40px;
-            min-height: 300px;
-            width: 100%;
-            background: LightGray;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(90px, 1fr));
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-gap: 10px;
-        }
+      .container13 {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(90px, 1fr));
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
 
-        .container14 {
-            font-size: 40px;
-            min-height: 300px;
-            width: 100%;
-            background: LightGray;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-gap: 10px;
-        }
+      .container14 {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
 
-        .container15 {
-            font-size: 40px;
-            min-height: 300px;
-            width: 100%;
-            background: LightGray;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-gap: 10px;
-        }
+      .container15 {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
 
-        .item1 {
-            background: LightSkyBlue;
-            grid-area: header;
-        }
+      .item1 {
+        background: LightSkyBlue;
+        grid-area: header;
+      }
 
-        .item2 {
-            background: LightSalmon;
-            grid-area: advert;
-        }
+      .item2 {
+        background: LightSalmon;
+        grid-area: advert;
+      }
 
-        .item3 {
-            background: PaleTurquoise;
-            grid-area: content;
-        }
+      .item3 {
+        background: PaleTurquoise;
+        grid-area: content;
+      }
 
-        #item3 {
-            background: PaleTurquoise;
-            grid-area: content;
-            display: grid;
-            grid-template-columns: auto 1fr;
-        }
+      #item3 {
+        background: PaleTurquoise;
+        grid-area: content;
+        display: grid;
+        grid-template-columns: auto 1fr;
+      }
 
-        .item4 {
-            background: lightpink;
-            grid-area: footer;
-        }
+      .item4 {
+        background: lightpink;
+        grid-area: footer;
+      }
 
-        .itemOne {
-            background: PaleGreen;
-        }
+      .itemOne {
+        background: PaleGreen;
+      }
 
-        .itemTwo {
-            background: BlanchedAlmond;
-        }
+      .itemTwo {
+        background: BlanchedAlmond;
+      }
 
+      .container16 {
+        font-size: 1.5em;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas:
+          "header"
+          "advert"
+          "content"
+          "footer";
+      }
+
+      @media (min-width: 700px) {
         .container16 {
-            font-size: 1.5em;
-            min-height: 300px;
-            width: 100%;
-            background: LightGray;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 50px auto 1fr auto;
-            grid-gap: 10px;
-            grid-template-areas:
-            "header"
-            "advert"
-            "content"
-            "footer";
-        }
-
-        @media (min-width: 700px){
-            .container16 {
-            grid-template-columns: auto 1fr;
-            grid-template-rows: auto 1fr auto;
-            grid-template-areas:
-                "advert header"
-                "advert content"
-                "advert footer";
-            }
-        }
-
-        @media (min-width: 1000px){
-            .container16 {
-            grid-template-areas:
-                "header header"
-                "advert content"
-                "footer footer";
-            }
-        }
-
-        .container17 {
-            font-size: 1.5em;
-            min-height: 300px;
-            width: 100%;
-            background: LightGray;
-            display: grid;
-            grid-template-columns: auto 1fr;
-            grid-template-rows: auto 1fr auto;
-            grid-gap: 10px;
-            grid-template-areas:
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto 1fr auto;
+          grid-template-areas:
             "advert header"
             "advert content"
             "advert footer";
         }
+      }
+
+      @media (min-width: 1000px) {
+        .container16 {
+          grid-template-areas:
+            "header header"
+            "advert content"
+            "footer footer";
+        }
+      }
+
+      .container17 {
+        font-size: 1.5em;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas:
+          "advert header"
+          "advert content"
+          "advert footer";
+      }
     </style>
 
     <h4><a href="index.html">Volver</a></h4>
@@ -424,7 +428,10 @@
       <div class="d5">5</div>
     </div>
 
-    <h3>Grid-template-areas: "header header header" "advert content content" "footer footer footer";</h3>
+    <h3>
+      Grid-template-areas: "header header header" "advert content content"
+      "footer footer footer";
+    </h3>
     <div class="container10">
       <div class="d1">1</div>
       <div class="d2">2</div>
@@ -489,22 +496,21 @@
 
     <h3>Media Query</h3>
     <div class="container16">
-        <div class="item1">header</div>
-        <div class="item2">advert</div>
-        <div class="item3">content</div>
-        <div class="item4">footer</div>
+      <div class="item1">header</div>
+      <div class="item2">advert</div>
+      <div class="item3">content</div>
+      <div class="item4">footer</div>
     </div>
 
     <h3>Grids within Grids</h3>
     <div class="container17">
-        <div class="item1">header</div>
-        <div class="item2">advert</div>
-        <div id="item3">
-          <div class="itemOne">paragraph1</div>
-          <div class="itemTwo">paragraph2</div>
-        </div>
-        <div class="item4">footer</div>
+      <div class="item1">header</div>
+      <div class="item2">advert</div>
+      <div id="item3">
+        <div class="itemOne">paragraph1</div>
+        <div class="itemTwo">paragraph2</div>
       </div>
-
+      <div class="item4">footer</div>
+    </div>
   </body>
 </html>
