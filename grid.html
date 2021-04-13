@@ -9,213 +9,502 @@
   <body>
     <style>
       h3 {
-        color: green;
+            color: green;
       }
-      
-      /* grid container */
+
+      .d1 {
+        background: LightSkyBlue;
+      }
+      .d2 {
+        background: LightSalmon;
+      }
+      #d2 {
+        background: LightSalmon;
+        justify-self: center;
+      }
+      .d3 {
+        background: PaleTurquoise;
+      }
+      #d3 {
+        background: PaleTurquoise;
+        align-self: end;
+      }
+      .d4 {
+        background: LightPink;
+      }
+      .d5 {
+        background: PaleGreen;
+      }
+      #d5 {
+        background: PaleGreen;
+        grid-column: 2 / 4;
+      }
+      #d6 {
+        background: PaleGreen;
+        grid-column: 2 / 4;
+        grid-row: 2 / 4;
+      }
+      #d7 {
+        background: PaleGreen;
+        grid-area: footer;
+      }
+      #d8 {
+        background: PaleGreen;
+        grid-area: 3/1/4/4;
+      }
+
       .container {
-        display: grid;
         font-size: 40px;
         width: 100%;
         background: LightGray;
-
-        /* agregar columnas */
-        grid-template-columns: 1fr 100px 2fr;
-
-        /* agregar filas */
-        grid-template-rows: 1fr 1fr 1fr;
-
-        /* agregar espacio entre columnas */
-        grid-column-gap: 20px;
-
-        /* agregar espacio entre filas */
-        grid-row-gap: 5px;
-
-        /* agregar espacio entre filas y columnas*/
-        grid-gap: 10px 20px;
-      }
-      
-      .d1 { background: LightSkyBlue; }
-
-      .d2 {
-        background: LightSalmon;
-
-        /* alinear item horizontalmente */
-        justify-self: center;
-      }
-
-      .d3 {
-        background: PaleTurquoise;
-
-        /* alinear item verticalmente */
-        align-self: end;
-      }
-
-      .d4 { background: LightPink; }
-
-      .d5 {
-        background: PaleGreen;
-
-        /* controlar espacio en columnas */
-        grid-column: 2 / 4;
-
-        /* controlar espacio en filas */
-        grid-row: 2 / 4;
+        display: grid;
       }
 
       .container2 {
-        /* alinear todos los elementos horizontalmente*/
-        justify-items: center;
-
-        /* alinear todos los elementos verticalmente*/
-        align-items: end;
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
       }
-      
+
       .container3 {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 80px 80px;
+      }
+
+      .container4 {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 100px 2fr;
+        grid-template-rows: 50px 50px;
+      }
+
+      .container5 {
         font-size: 40px;
         min-height: 300px;
         width: 100%;
         background: LightGray;
         display: grid;
-        grid-gap: 10px;
-
-        /* ajustar tamaño de las celdas con repeat */
-        grid-template-rows: repeat(3, 1fr);
-
-        /* limitar el tamaño de las celdas con minmax y auto-fill o auto-fit*/
-        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-
-        /* dividir celdas en areas */
-        grid-template-areas:
-        "header header header"
-        " . content content"
-        "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
       }
 
-      .item1 { background: LightSkyBlue; }
-      .item2 { background: LightSalmon; }
-      .item3 { background: PaleTurquoise; }
-      .item4 { background: LightPink; }
-      .item5 { 
-        background: PaleGreen; 
-        
-        /* asignar area a celda */
-        grid-area: footer;
-      }
-
-      .container4 {
-        font-size: 1.5em;
+      .container6 {
+        font-size: 40px;
         min-height: 300px;
         width: 100%;
         background: LightGray;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 50px auto 1fr auto;
-        grid-gap: 10px;
-        grid-template-areas:
-          "header"
-          "advert"
-          "content"
-          "footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 5px;
       }
 
-      .cell1 {
-        background: LightSkyBlue;
-        grid-area: header;
-      }
-
-      .cell2 {
-        background: LightSalmon;
-        grid-area: advert;
-      }
-
-      .cell3 {
-        background: PaleTurquoise;
-        grid-area: content;
-
-        /* grid interno */
+      .container7 {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px 20px;
       }
 
-      .cell4 {
-        background: lightpink;
-        grid-area: footer;
+      .container8 {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px 20px;
+        justify-items: center;
       }
 
-      .itemOne {
-        background: PaleGreen;
+      .container9 {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px 20px;
+        align-items: end;
       }
 
-      .itemTwo {
-        background: BlanchedAlmond;
-      }
+      .container10 {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px 20px;
+        grid-template-areas:
+          "header header header"
+          " . content content"
+          "footer footer footer";
+        }
 
-      @media (min-width: 400px){
-        .container4{
-          grid-template-columns: auto 1fr;
-          grid-template-rows: auto 1fr auto;
-          grid-template-areas:
+        .container11 {
+            font-size: 40px;
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            grid-template-areas:
+            "header header header"
+            "advert content content"
+            "footer footer footer";
+        }
+
+        .container12 {
+            font-size: 40px;
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .container13 {
+            font-size: 40px;
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(90px, 1fr));
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .container14 {
+            font-size: 40px;
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .container15 {
+            font-size: 40px;
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .item1 {
+            background: LightSkyBlue;
+            grid-area: header;
+        }
+
+        .item2 {
+            background: LightSalmon;
+            grid-area: advert;
+        }
+
+        .item3 {
+            background: PaleTurquoise;
+            grid-area: content;
+        }
+
+        #item3 {
+            background: PaleTurquoise;
+            grid-area: content;
+            display: grid;
+            grid-template-columns: auto 1fr;
+        }
+
+        .item4 {
+            background: lightpink;
+            grid-area: footer;
+        }
+
+        .itemOne {
+            background: PaleGreen;
+        }
+
+        .itemTwo {
+            background: BlanchedAlmond;
+        }
+
+        .container16 {
+            font-size: 1.5em;
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 50px auto 1fr auto;
+            grid-gap: 10px;
+            grid-template-areas:
+            "header"
+            "advert"
+            "content"
+            "footer";
+        }
+
+        @media (min-width: 700px){
+            .container16 {
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "advert header"
+                "advert content"
+                "advert footer";
+            }
+        }
+
+        @media (min-width: 1000px){
+            .container16 {
+            grid-template-areas:
+                "header header"
+                "advert content"
+                "footer footer";
+            }
+        }
+
+        .container17 {
+            font-size: 1.5em;
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-gap: 10px;
+            grid-template-areas:
             "advert header"
             "advert content"
             "advert footer";
         }
-      }
-
-      @media (min-width: 700px){
-        .container4{
-          grid-template-areas:
-            "header header"
-            "advert content"
-            "footer footer";
-        }
-      }
-
     </style>
 
     <h4><a href="index.html">Volver</a></h4>
 
-    <h3>Ajuste de tamaños en filas y columnas</h3>
+    <h3>Display: grid;</h3>
     <div class="container">
-        <div class="d1">1</div>
-        <div class="d2">2</div>
-        <div class="d3">3</div>
-        <div class="d4">4</div>
-        <div class="d5">5</div>
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
     </div>
-    <br>
 
-    <h3>Alinear objetos en Horizontal y Vertical</h3>
-    <div class="container container2">
-        <div class="item1">1</div>
-        <div class="item2">2</div>
-        <div class="item3">3</div>
-        <div class="item4">4</div>
-        <div class="d5">5</div>
+    <h3>Grid-template-columns: 100px 100px 100px;</h3>
+    <div class="container2">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
     </div>
-    <br>
 
-    <h3>Dividir y ajustar celdas en areas</h3>
+    <h3>Grid-template-rows: 80px 80px;</h3>
     <div class="container3">
-        <div class="item1">1</div>
-        <div class="item2">2</div>
-        <div class="item3">3</div>
-        <div class="item4">4</div>
-        <div class="item5">5</div>
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
     </div>
-    <br>
 
-    <h3>Uso de Media Queries y Grids internos</h3>
+    <h3>Grid-template-columns: 1fr 100px 2fr;</h3>
     <div class="container4">
-        <div class="cell1">header</div>
-        <div class="cell2">advert</div>
-        <div class="cell3">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>Grid-column-gap: 20px;</h3>
+    <div class="container5">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>Grid-row-gap: 5px;</h3>
+    <div class="container6">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>Grid-gap: 10px 20px;</h3>
+    <div class="container7">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>5 = Grid-column: 2 / 4;</h3>
+    <div class="container7">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div id="d5">5</div>
+    </div>
+
+    <h3>5 = Grid-row: 2 / 4;</h3>
+    <div class="container7">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div id="d6">5</div>
+    </div>
+
+    <h3>2 = Justify-self: center;</h3>
+    <div class="container7">
+      <div class="d1">1</div>
+      <div id="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>3 = Align-self: end;</h3>
+    <div class="container7">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div id="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>Justify-items: center;</h3>
+    <div class="container8">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>Align-items: end;</h3>
+    <div class="container9">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>Grid-template-areas: "header header header" "advert content content" "footer footer footer";</h3>
+    <div class="container10">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>5 = Grid-area: footer;</h3>
+    <div class="container10">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div id="d7">5</div>
+    </div>
+
+    <h3>5 = Grid-area: 3/1/4/4;</h3>
+    <div class="container11">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div id="d8">5</div>
+    </div>
+
+    <h3>Grid-template-columns: repeat(3, 1fr);</h3>
+    <div class="container12">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>Grid-template-columns: repeat(3, minmax(90px, 1fr));</h3>
+    <div class="container13">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>Grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));</h3>
+    <div class="container14">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>Grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));</h3>
+    <div class="container15">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+
+    <h3>Media Query</h3>
+    <div class="container16">
+        <div class="item1">header</div>
+        <div class="item2">advert</div>
+        <div class="item3">content</div>
+        <div class="item4">footer</div>
+    </div>
+
+    <h3>Grids within Grids</h3>
+    <div class="container17">
+        <div class="item1">header</div>
+        <div class="item2">advert</div>
+        <div id="item3">
           <div class="itemOne">paragraph1</div>
           <div class="itemTwo">paragraph2</div>
         </div>
-        <div class="cell4">footer</div>
-    </div>
-    <br>
+        <div class="item4">footer</div>
+      </div>
 
   </body>
 </html>
